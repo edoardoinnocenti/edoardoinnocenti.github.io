@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Edoardo Innocenti / Portfolio"
+title                    : "Portfolio"
 title_separator          : "-"
 name                     : &name "Edoardo Innocenti"
 description              : &description "personal description to be added"
@@ -234,8 +234,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comment: true
+      # share: true
+      # comment: true
   # # _talks
   # - scope:
   #     path: ""
