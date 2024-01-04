@@ -1,7 +1,16 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Noise and Vibration Engineering Projects"
+excerpt: "Three small projects about the interaction of noise and vibrating structures<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+### Introduction
+
+### 1. Bending waves in thin rectangular plates
+
+In this project, a theoretical plate's vibration behavior is analyzed analytically and with a Finite Element Analysis made with a MATLAB script. Two different constraint conditions are considered, in the first part the plate is constrained on all four edges and later only on two opposite ones.
+
+## Rectangular plate supported on the four edges
+
+The mode shapes and natural frequencies of the plate are evaluated analytically and the first 6 mode shapes are shown in the figure below
+![alt text](/images/nv_firstModeShapes.png)
