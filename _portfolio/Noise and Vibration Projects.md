@@ -15,7 +15,7 @@ In this project, a theoretical plate's vibration behavior is analyzed analytical
 The mode shapes and natural frequencies of the plate are evaluated analytically and the first 6 mode shapes are shown in the figure below
 
 <div style="text-align:center">
-  ![alt text](/images/nv_firstModeShapes.png)
+  <img src="/images/nv_firstModeShapes.png" alt="alt text">
 </div>
 
 The comparison of the analytical solution for the natural frequencies with the FEM solutions is shown in the following scatter plot.
