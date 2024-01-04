@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Portfolio"
+title                    : "About me"
 title_separator          : "-"
 name                     : &name "Edoardo Innocenti"
 description              : &description "personal description to be added"
@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Edoardo Innocenti"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Antwerp"
-  employer         : "Atlas Copco"
+  bio              : "Mechanical Engineer"
+  location         : "Antwerp, Belgium"
+  employer         : 
   pubmed           :
   googlescholar    :
   email            : "edoardoinnocenti98@gmail.com"
