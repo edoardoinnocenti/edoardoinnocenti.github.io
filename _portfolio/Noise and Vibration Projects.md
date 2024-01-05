@@ -4,9 +4,9 @@ excerpt: "Three small projects about the interaction of noise and vibrating stru
 collection: portfolio
 ---
 
-### Introduction
+# Introduction
 
-### 1. Bending waves in thin rectangular plates
+# 1. Bending waves in thin rectangular plates
 
 In this project, a theoretical plate's vibration behavior is analyzed analytically and with a Finite Element Analysis made with a MATLAB script. Two different constraint conditions are considered, in the first part the plate is constrained on all four edges and later only on two opposite ones.
 
@@ -16,6 +16,7 @@ The mode shapes and natural frequencies of the plate are evaluated analytically 
 
 <div style="text-align:center">
   <img src="/images/nv_firstModeShapes.png" alt="alt text">
+  <br>
 </div>
 
 The comparison of the analytical solution for the natural frequencies with the FEM solutions is shown in the following scatter plot.
