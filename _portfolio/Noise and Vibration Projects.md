@@ -1,26 +1,130 @@
 ---
 title: "Noise and Vibration Engineering Projects"
-excerpt: "Three small projects about the interaction of noise and vibrating structures<br/><img src='/images/500x300.png'>"
+excerpt: "Three small projects about the interaction of noise and vibrating structures<br/><img src='/images/nv_portfolioPhoto.png'>"
 collection: portfolio
 ---
 
-# Introduction
+## Introduction
+The presented collection of projects delves into diverse realms of mechanical and acoustical analyses, showcasing either theoretical insights or practical experimentation. Each project offers a perspective on the behavior of physical systems, ranging from the vibrations of thin rectangular plates to sound measurements of a washing machine in an anechoic chamber and the complex dynamics of sound radiation by a vibrating plate.
 
-# 1. Bending waves in thin rectangular plates
+## 1. Bending waves in thin rectangular plates
 
 In this project, a theoretical plate's vibration behavior is analyzed analytically and with a Finite Element Analysis made with a MATLAB script. Two different constraint conditions are considered, in the first part the plate is constrained on all four edges and later only on two opposite ones.
 
-## Rectangular plate supported on the four edges
+### Rectangular plate supported on the four edges
 
 The mode shapes and natural frequencies of the plate are evaluated analytically and the first 6 mode shapes are shown in the figure below
 
 <div style="text-align:center">
   <img src="/images/nv_firstModeShapes.png" alt="alt text">
-  <br>
 </div>
+<br>
 
 The comparison of the analytical solution for the natural frequencies with the FEM solutions is shown in the following scatter plot.
 Notably, the solutions are nearly identical up to a frequency of about 350 Hz, above that the differences in the results increase rapidly. As a reason for that observation can be stated, that in the mentioned frequency region the resolution of the FEM model is not any more accurate enough to properly describe the physical situation.
 For the analytical model, on the other hand, the assumption to neglect the shear contribution becomes an issue for high frequencies, since the wavelength reduces to be comparable to the plate thickness.
 
-![alt text](/images/nv_scatterPlot1.png) ![alt text](/images/nv_MAC1.png)
+<div style="display: flex; justify-content: space-between;">
+    <img src="/images/nv_scatterPlot1.png" alt="alt text">
+    <img src="/images/nv_MAC1.png" alt="alt text">
+</div>
+<br>
+
+For a further understanding of the model's behavior, a point mobility analysis is helpful. The point mobility describes the ratio between the point velocity and the applied force.
+
+<div style="text-align:center">
+  <img src="/images/nv_pointMobility1.png" alt="alt text">
+</div>
+<br>
+
+The same analysis was done also for the plate constraint on only the two opposite edges. To keep it short, this example is not reported, but for further information feel free to contact me.
+
+## 2. Sound measurements of a washing machine
+
+In the following the measurement results of test setups in an anechoic chamber are assessed. In the first test sound powers of a washing machine are measured, in the second the directivity of that same sound probe is assessed.
+The experimental setup for sound power measurement was defined according to ISO-3744, in detail:
+- 10 microphones were placed on a hemisphere of *r=2m*
+- The dimensions of the washing machine are *0.85m x 0.5m x 0.6m*
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="/images/nv_soundPowerSetupSide.png" alt="alt text">
+    <img src="/images/nv_soundPowerSetupUp.png" alt="alt text">
+</div>
+<br>
+
+In the test setup for directivity measurements, microphones were placed in a semi-circle of radius *r=2m*, with a step of *10°*
+- Height from ground of *0.9m*
+- 19 measurement points are considered (acquired in two steps)
+
+<div style="text-align:center">
+  <img src="/images/nv_soundDirSetup.png" alt="alt text">
+</div>
+<br>
+
+The measurement values coming from the microphones of both test setups have to be processed to obtain 1/3 octave bands.
+For a proper evaluation of results, the octave bands have to be categorized into far, and near fields, to consider a change of the characteristics of the impedance and other parameters at a transition point. The transition is located at:
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+    <mrow>
+        <mi>r</mi>
+        <mo>=</mo>
+        <mfrac>
+            <mrow>
+                <mn>5</mn>
+                <mi>λ</mi>
+            </mrow>
+            <mi>π</mi>
+        </mfrac>
+        <mo>≈</mo>
+        <mn>272.95</mn>
+        <mi>Hz</mi>
+    </mrow>
+</math>
+
+In consequence, the octave bands from *316Hz* to *10000Hz* satisfy the far field assumption and are therefore characterized as in the far field.
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="/images/nv_octBand1.png" alt="alt text">
+    <img src="/images/nv_octBand2.png" alt="alt text">
+</div>
+<br>
+
+The results of the directivity measurement can be evaluated in their directivity per 1/3 octave band. 
+It’s clearly visible that certain 1/3 octave bands occur mainly in some directions.
+It is to assume that this result is generated by single machine elements that generate these frequencies.
+
+<div style="text-align:center">
+  <img src="/images/nv_polarDir.png" alt="alt text">
+</div>
+<br>
+
+The sound power measurement can be evaluated regarding the sound power level in dB for each 1/3 octave band.  As one method the procedure described in ISO-3744 can be used. This method includes a correction for background noise.
+As an alternative, the sound power level can also be obtained by the integration of the normal sound intensity.
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="/images/nv_soundPower1.png" alt="alt text">
+    <img src="/images/nv_soundPower2.png" alt="alt text">
+</div>
+<br>
+
+## 3. Sound radiation by a vibrating plate
+
+In the following, the radiated sound field of a plate with harmonic force excitation shall be evaluated. The plate is positioned in an infinite baffle. According to the two most relevant acoustic elements of the model the analysis is split up into two parts. In the first, the plate vibration is evaluated. The second covers the examination of the radiated sound field.
+
+To model the vibration behavior of the plate first the natural frequencies and mode shapes have to be computed, the *50th* mode is shown below together with the Frequency Response Function in the point *(0, 0)*.
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="/images/nv_mode50.png" alt="alt text">
+    <img src="/images/nv_frf00.png" alt="alt text">
+</div>
+<br>
+
+Then the radiated sound field of the plate is calculated through Rayleigh's Integral method.
+Due to the infinite character of the baffle, the criteria, that only a small portion of the plate is allowed to vibrate, is given and all assumptions for Rayleigh’s Integral are verified.
+
+The generated sound field is displayed on three different response planes, the following figure shows an example of the radiated sound of a monopole and bipole modes in a vertical plane:
+
+<div style="text-align:center">
+  <img src="/images/nv_soundRadiation.png" alt="alt text">
+</div>
+<br>
