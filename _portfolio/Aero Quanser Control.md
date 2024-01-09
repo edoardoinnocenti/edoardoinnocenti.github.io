@@ -1,13 +1,21 @@
 ---
 title: "Aero Quanser Control"
-excerpt: "TO BE ADDED<br/><img src='/images/nv_portfolioPhoto.png'>"
+excerpt: "Project about the implementation of different types of control algotithms<br><br><img src='/images/aq_portfolioPhoto.png'>"
 collection: portfolio
 ---
 
-## Introduction
-TO BE ADDED
+## 1. Introduction
+This project, conducted during my time at *Politecnico di Milano*, delves into the identification and control of an *Aero Quanser*, a device created for educational purposes that facilitates the implementation of control algorithms in a real physical system.
 
-## 1. Model Identification
+In the first part of the project, the necessary mechanical properties of the system are estimated; after validation, these properties can be used to create a mathematical digital twin of the real system that can simulate the Aero Quanser.
+
+Various control methods, such as Proportional Integral Derivative (PID), pole placement, and Linear Quadratic Regulator (LQR), are employed to govern the 1-DOF system under diverse scenarios. As the research progresses, similar methodologies are extended to a more complex 2-DOF system, aiming to enhance our understanding of multi-degree-of-freedom dynamics and to implement robust control strategies capable of mitigating external disturbances.
+
+<div style="text-align:center">
+  <img src="/images/aq_aeroQuanser.png" alt="alt text">
+</div>
+
+## 2. Model Identification
 
 Initially, only pitch rotation freedom is allowed and the structural mechanical properties of the system are assessed: moment of inertia *J*, stiffness *k* and damping coefficient *r*. The mass, thrust displacement, and center of mass position are instead given.
 
@@ -32,9 +40,8 @@ Finally, the thrust force was linearized in function of the applied voltage, the
 <div style="text-align:center">
   <img src="/images/aq_modelComparison.png" alt="alt text">
 </div>
-<br>
 
-## 2. Control of 1-DOF system
+## 3. Control of 1-DOF system
 
 Various control methods are examined for a 1-DOF system under two scenarios: one following a stable step position as input and another allowing the system to track a sine wave. The Proportional Integral Derivative (PID) control involves tuning the  gains to achieve desired system response. The proportional term responds to the current error, the integral term addresses accumulated past errors, and the derivative term anticipates future errors, collectively providing stability and performance. The Simulink model of the PID control for a step reference input is shown below.
 
@@ -57,9 +64,8 @@ The response to a sinusoidal reference with a LQR control is shown below.
     <video src="/video/aq_sineResponse.mp4"  width="800" height="400" alt="alt text" controls>Video Not Available</video>
     <img src="/images/aq_sineTrajectory.png" alt="alt text">
 </div>
-<br>
 
-## 2. Control of 2-DOFs system
+## 4. Control of 2-DOFs system
 
 The same tasks shown above were done also for the 2-DOFs system. To keep this presentation short, all the steps and results for the 2-DOF are not reported, but for further information feel free to contact me.
 
@@ -68,4 +74,3 @@ Only the response of the 2-DOFs system to an external macroscopic distrubance is
 <div style="text-align:center">
     <img src="/video/aq_distrurbancesRejectionGIF.gif" width="600" height="340" alt="alt text">
 </div>
-

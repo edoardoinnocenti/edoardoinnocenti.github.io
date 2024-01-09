@@ -1,6 +1,6 @@
 ---
 title: "Noise and Vibration Engineering Projects"
-excerpt: "Three small projects about the interaction of noise and vibrating structures<br/><img src='/images/nv_portfolioPhoto.png'>"
+excerpt: "Three small projects about the interaction of noise and vibrating structures<br><br><img src='/images/nv_portfolioPhoto.png'>"
 collection: portfolio
 ---
 
