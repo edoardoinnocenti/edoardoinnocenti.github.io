@@ -1,11 +1,12 @@
 ---
 title: "Design of a Corking Machine"
-excerpt: "TO BE ADDED<br><br><img src='/images/aq_portfolioPhoto.png'>"
+excerpt: "Report of the design procedure of a corking machine using MATLAB and Adams View<br><br><img src='/images/cm_portfolioPhoto.png'>"
 collection: portfolio
 ---
 
 ## 1. Introduction
-The aim of this project report is to review the design process of a corking machine, used to insert a cork in bottles of wine. 
+This project report aims to review the design process of a corking machine, used to insert a cork in bottles of wine.
+In the first part, the motion law for the plunger was chosen to follow a cycloidal profile, chosen for its smooth and efficient motion. Then the design process involves two phases: initial lengths definition of the machine's elements using MATLAB and subsequent kinematic and dynamic analysis in Adams View.
 
 <div style="text-align:center">
   <img src="/images/cm_corkingMachine.png" alt="alt text">
@@ -44,12 +45,16 @@ Focusing on the two equal slider-crank mechanisms OAB and O’A’B’, two vari
 
 The goal of the first simulation was to evaluate the minimum length able to satisfy the imposed constraints. As a first step, the motion of the plunger was imposed and the motion of point A can consequentially be evaluated in order to use it as input for the internal slider crank design. The final result of the inverse kynematic analysis are reported below.
 
+<div style="text-align:center">
+  <img src="/images/cm_parameters.png" alt="alt text">
+</div>
 <div  style="display: flex; justify-content: space-between;">
   <img src="/images/cm_velocity.png" alt="alt text">
   <img src="/images/cm_acceleration.png" alt="alt text">
 </div>
+<br>
 
-# 3.2 
+# 3.2 Phase Two: ADAMS simulations
 
 As previously stated, once the geometric values of the mechanism had been defined, other quantities can be studied using ADAMS View, i.e. the dynamic behaviour of the mechanism. In order to properly account for the inertial forces, also the material had to be selected. Hence, all the components have been selected of steel, while the plunger has been chosen of stainless steel because of the contact with food and beverage products. After the links had been properly modelled on ADAMS View, as shown below.
 
@@ -58,6 +63,46 @@ As previously stated, once the geometric values of the mechanism had been define
 </div>
 <br>
 
+Once all whole mechanism had been defined on ADAMS View, a kinematic simulation was done imposing the motion at the plunger. The results can be compared to the ones obtained with MATLAB: as expected, there is a perfect a matching among the shapes of the curves obtained with the two programs.
 
+Then, a further step in the design process had been done: the cam design. For this project, a cam and roller mechanism has been chosen, thanks to its ability to reduce the friction and since allows not to use lubricants. In particular, this can be obtained by imposing a curve-to-curve contact between the roller and the cam profile.
 
+<div  style="display: flex; justify-content: space-between;">
+  <img src="/images/cm_camProfile.png" alt="alt text">
+  <img src="/images/cm_camNoUndercut.png" alt="alt text">
+</div>
+<br>
 
+Once the cam had been defined, the contact constraint between the roller and the cam was introduced. Moreover, a spring was employed to maintain the contact among these two elements.
+
+Thus, a dynamic simulation was performed and, as can be clearly seen, the motion of the plunger is not coincident with the desired one. This is due to the fact that the spring introduces lots of oscillations that are not sufficiently damped.
+
+<div style="text-align:center">
+    <img src="/video/cm_dynamicsFirstIterstion.gif" width="600" height="340" alt="alt text">
+</div>
+<br>
+
+After several simulations, aimed at properly tuning the stiffness of the spring, the best result in terms of following the imposed motion was found. However, this happens at the expense of the contact force, which resulted in being too high and would have led to a contact pressure impossible to be withstood by most commercial steels.
+
+A possible solution was the one related to a change in the geometric parameters of the mechanism, with the goal of decreasing the maximum displacement of the follower. Indeed, this choice allows to increase the stiffness of the spring without increasing too much the elastic restoring force, one of the main parameters affecting the contact pressure.
+
+Clearly, once the geometric characteristics had been modified, the whole kinematic of the mechanism changes, leading to a change in the required cam. Doing the very same procedure followed previously, the new cam has been obtained and reported below.
+
+<div  style="display: flex; justify-content: space-between;">
+  <img src="/images/cm_camProfileFinal.png" alt="alt text">
+  <img src="/images/cm_camNoUndercutFinal.png" alt="alt text">
+</div>
+<br>
+
+At this point, several dynamic simulations were done, were the only difference was the value of the spring stiffness. Moreover, the *500N* force required to force the cork in the bottle was introduced. Finally, the effect of the friction between the cam and the roller had been investigated. The final dynamic simulation is reported below.
+
+<div style="text-align:center">
+    <img src="/video/cm_dynamicsFinalIterstion.gif" width="600" height="340" alt="alt text">
+</div>
+<br>
+
+## 4. 3D CAD Design
+
+<div style="text-align:center">
+  <img src="/images/cm_cadModel.png" alt="alt text">
+</div>

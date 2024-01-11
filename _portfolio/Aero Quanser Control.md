@@ -1,6 +1,6 @@
 ---
 title: "Aero Quanser Control"
-excerpt: "Project about the implementation of different types of control algotithms<br><br><img src='/images/aq_portfolioPhoto.png'>"
+excerpt: "Project about the implementation of different types of control algotithms (PID, LQR) in MATLAB and Simulink<br><br><img src='/images/aq_portfolioPhoto.png'>"
 collection: portfolio
 ---
 
@@ -28,7 +28,7 @@ To evaluate the mechanical properties the response of the free system was measur
 This was done by activating only one motor, then when a stable position was reached the motor was stopped letting the structure freely oscillate.
 
 <div  style="display: flex; justify-content: space-between;">
-  <video src="/video/aq_freeOscillation.mp4"  width="800" height="400" alt="alt text" controls>Video Not Available</video>
+  <img src="/video/aq_freeOscillationGIF.gif" width="220" height="400" alt="alt text">
   <img src="/images/aq_freeOscillation.png" alt="alt text">
 </div>
 <br>
@@ -61,7 +61,7 @@ Finally, an infinite time Linear Quadratic Regulator (LQR) is employed for optim
 The response to a sinusoidal reference with a LQR control is shown below.
 
 <div style="display: flex; justify-content: space-between;">
-    <video src="/video/aq_sineResponse.mp4"  width="800" height="400" alt="alt text" controls>Video Not Available</video>
+    <img src="/video/aq_sineResponseGIF.gif" width="220" height="400" alt="alt text">
     <img src="/images/aq_sineTrajectory.png" alt="alt text">
 </div>
 
