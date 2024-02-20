@@ -6,7 +6,7 @@ collection: portfolio
 
 ## Introduction
 This project focuses on developing a machine learning model to identify handwritten digits (0-9) using a reduced version of the MNIST dataset. It's a cornerstone in understanding image recognition techniques in the field of machine learning.
-The proposed model shows very good performance with a final accuracy on the unknown dataset **higher than 0.98%**.
+The proposed model shows very good performance with a final accuracy on the unknown dataset **higher than 98%**.
 
 Full project github repository: [Click Here!](https://github.com/edoardoinnocenti/DigitRecognizer/blob/main/DigitRecognizer.ipynb)
 
@@ -50,4 +50,4 @@ Overall, this CNN model is configured to extract features from images through co
 
 ## Results
 The training results are shown in the code, where model training, confusion matrix and correct/incorrect images are reported.
-The final sumbission.csv returns an accuracy > 0.98 % on the unknown test dataset.
+The final sumbission.csv returns an accuracy > 98 % on the unknown test dataset.
